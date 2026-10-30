@@ -1,0 +1,39 @@
+IN THE MIDDLE OF THE RANCHO — VERSIÓN REPARADA
+================================================
+
+QUÉ SE REPARÓ
+- Se armó una estructura de React + Vite que faltaba en el ZIP original.
+- Se corrigió el punto de entrada de index.html y se reemplazó el App.tsx de plantilla que pedía servicios de autenticación inexistentes.
+- Se organizaron los componentes recuperables y se repararon sus imports.
+- Se reconstruyó src/game/rooms.js, que no venía en el ZIP, con escenarios pixel-art básicos y puntos interactivos para que el prólogo pueda jugarse.
+- Los archivos originales recibidos se guardaron en original_recovered/ para conservarlos como referencia.
+
+REQUISITOS
+- Windows 10/11
+- Node.js LTS instalado (incluye npm). Descargar desde https://nodejs.org/
+- Internet la primera vez para descargar las dependencias.
+
+CÓMO ABRIR EL JUEGO
+1. Descomprimí el ZIP completo en una carpeta, por ejemplo Escritorio\InTheMiddleOfTheRancho.
+2. Abrí esa carpeta en Visual Studio Code (Archivo > Abrir carpeta).
+3. En VS Code, abrí Terminal > Nueva terminal.
+4. Ejecutá este comando y esperá que termine:
+      npm install
+5. Después ejecutá:
+      npm run dev
+6. La terminal va a mostrar una dirección local, normalmente http://127.0.0.1:5173/ . Abrila en Chrome o Edge.
+7. Para detener el servidor, volvé a la terminal y presioná Ctrl+C.
+
+PARA GENERAR LA VERSIÓN DE PRODUCCIÓN
+      npm run build
+Esto crea la carpeta dist/. Para probar esa versión: npm run preview
+
+CONTROLES
+- W A S D: moverte libremente por la habitación.
+- Hacé clic en los objetos y lugares señalados para interactuar.
+- Cada noche llega una persona distinta a la puerta; elegí si abrir o no.
+- Escuchá la radio en la cocina para conocer las noticias del apagón.
+- Después de resolver la visita, podés pasar a la noche siguiente.
+
+IMPORTANTE
+El ZIP que recibí no incluía package.json, la carpeta src/, ni el módulo original de escenarios (rooms.js); además, faltaban varias carpetas que Home.jsx intentaba importar. Por eso reconstruí las piezas mínimas necesarias. El juego queda preparado para ejecutarse y conserva el código recuperable, pero los escenarios que faltaban fueron recreados y pueden diferir del diseño original que tenías en la plataforma donde lo generaste.
